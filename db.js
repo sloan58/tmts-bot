@@ -1,13 +1,21 @@
-var mysql = require('mysql');
-var connection = mysql.createConnection({
+const env = require('node-env-file');
+env(__dirname + '/.env');
+
+if(!process.env.db_host) {
+    console.log(process.process.env.db_host);
+    process.exit(1)
+}
+
+const mysql = require('mysql');
+const connection = mysql.createConnection({
     host     : process.env.db_host,
     database : process.env.db_database,
-    user     : proccess.env.db_user,
+    user     : process.env.db_user,
     password : process.env.db_password,
     port     : "3306"
 });
       
-connection.connect(function(err) {
+connection.connect((err) => {
     if (err) throw err;
 });
 

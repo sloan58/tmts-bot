@@ -36,16 +36,6 @@ if (!process.env.public_address) {
 var Botkit = require('botkit');
 var debug = require('debug')('botkit:main');
 
-var mysql = require('mysql');
-
-exports.connection = mysql.createConnection({
-    host     : "***REMOVED***",
-    database : "***REMOVED***",
-    user     : "***REMOVED***",
-    password : "***REMOVED***",
-    port     : "3306"
-});
-
 // Create the Botkit controller, which controls all instances of the bot.
 var controller = Botkit.sparkbot({
     // debug: true,
