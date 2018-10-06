@@ -1,5 +1,5 @@
-const env = require('node-env-file');
-env(__dirname + '/.env');
+// const env = require('node-env-file');
+// env(__dirname + '/.env');
 
 if(!process.env.db_host) {
     console.log(process.process.env.db_host);

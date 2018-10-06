@@ -24,7 +24,6 @@ module.exports = function(controller) {
                             next();
                         }
                         if (results[0].count) {
-                            message.tmts_user = results[0]
                             message.tmts_user.isAdmin = true
                             // connection.end();
                         }

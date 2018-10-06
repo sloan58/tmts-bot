@@ -13,7 +13,7 @@ module.exports = function(controller) {
                 updated_at: '',
                 user_id: message.tmts_user.id,
             }
-
+            console.log(message)
             convo.setVar('user', message.tmts_user.name)
 
             const moment = require('moment')
